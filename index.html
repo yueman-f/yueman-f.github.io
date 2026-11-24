@@ -3,21 +3,41 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Yueman Feng’s research on pension investment and life insurance at the University of Hong Kong.">
-  <title>Yueman Feng · Research</title>
+  <meta name="description" content="Yueman Feng studies pension investment and life insurance at the University of Hong Kong. Explore research on portfolio constraints, mortality, and retirement decisions.">
+  <title>Yueman Feng | Research</title>
   <style>
-    :root { color-scheme: light; background: #fbfaf7; color: #222725; font: 100%/1.6 "Inter", system-ui, sans-serif; }
-    body { max-width: 45rem; margin: auto; padding: clamp(2rem, 8vw, 6rem) 1.5rem; }
-    h1, h2, h3 { font-family: "Baskervville", Georgia, serif; font-weight: normal; line-height: 1.14; }
-    h1 { font-size: clamp(3rem, 8vw, 5rem); letter-spacing: -.045em; margin: 0 0 .35em; }
-    header p { max-width: 38rem; }
-    .affiliation { color: #45544e; }
-    section { margin-top: 3.5rem; }
-    h2 { font-size: 1.9rem; }
-    article { border-top: 1px solid #cbd0ca; padding: 1.25rem 0; }
-    h3 { margin: 0; font-size: clamp(1.35rem, 4vw, 1.7rem); }
-    a { color: #1b4965; text-decoration-thickness: 1px; text-underline-offset: .15em; }
-    a:hover, a:focus-visible { color: #08273d; }
+    :root { color-scheme: light; font: 100%/1.55 Inter, "Helvetica Neue", Arial, sans-serif; color: #202728; background: white; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { width: min(100% - 3rem, 51rem); margin: 0 auto; padding: clamp(2.5rem, 7vw, 5rem) 0 3rem; }
+    header { max-width: 42rem; margin: 0 auto 3rem; }
+    h1, h2, h3, p, figure { margin: 0; }
+    h1, .affiliation, nav { text-align: center; }
+    h1 { font-size: clamp(2.35rem, 5vw, 3.15rem); line-height: 1.15; font-weight: 520; letter-spacing: -.055em; }
+    .affiliation { margin: .45rem 0 1.3rem; color: #566168; }
+    nav { margin-top: 1.05rem; }
+    nav span { color: #a1a8ac; padding: 0 .65rem; }
+    a { color: #145e90; text-decoration-thickness: 1px; text-underline-offset: .17em; }
+    a:hover { color: #93461b; }
+    a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+    h2 { font-size: 1.55rem; letter-spacing: -.04em; font-weight: 550; border-bottom: 1px solid #d6dedf; padding-bottom: .55rem; }
+    article { display: grid; grid-template-columns: minmax(0, 16rem) 1fr; align-items: center; gap: clamp(1.5rem, 4vw, 2.75rem); padding: 1.8rem 0; }
+    article + article { border-top: 1px solid #e8eced; }
+    figure a { display: block; }
+    img { width: 100%; height: auto; display: block; }
+    figcaption { color: #566168; font-size: .78rem; margin-top: .6rem; text-align: center; }
+    h3 { font-size: 1.16rem; line-height: 1.35; letter-spacing: -.018em; }
+    h3 a { text-decoration: none; }
+    h3 a:hover { text-decoration: underline; }
+    .authors { font-size: .92rem; margin-top: .48rem; }
+    .paper p + p { margin-top: .6rem; }
+    .links { font-size: .88rem; }
+    @media (max-width: 620px) {
+      main { width: min(100% - 2.25rem, 30rem); }
+      header { margin-bottom: 2rem; }
+      article { display: flex; flex-direction: column-reverse; align-items: stretch; gap: 1.1rem; }
+      figure { width: min(100%, 18rem); margin: auto; }
+    }
   </style>
 </head>
 <body>
@@ -25,17 +45,34 @@
     <header>
       <h1>Yueman Feng</h1>
       <p class="affiliation">PhD student in Actuarial Science · The University of Hong Kong</p>
-      <p>I study how people can invest for retirement and choose life insurance coverage as interest rates, earnings, and life expectancy change.</p>
+      <p>I study how people can invest for retirement and choose life insurance as interest rates, earnings, and life expectancy change. My work uses stochastic control and numerical optimization to understand how trading limits shape these decisions.</p>
+      <nav aria-label="Profile links"><a href="https://scholar.google.com/citations?user=Y8MpmvcAAAAJ&amp;hl=en">Google Scholar</a><span aria-hidden="true">/</span><a href="https://github.com/yueman-f">GitHub</a></nav>
     </header>
-    <section aria-labelledby="papers">
-      <h2 id="papers">Research papers</h2>
+    <section aria-labelledby="research">
+      <h2 id="research">Research</h2>
       <article>
-        <h3><a href="https://arxiv.org/abs/2611.06495">Constrained Defined-Contribution Pension Management: A Reparameterized Neural Network Approach</a></h3>
-        <p>How can a pension fund use a neural network to choose investments while respecting portfolio constraints?</p>
+        <figure>
+          <a href="https://arxiv.org/pdf/2608.04532v2#page=13" aria-label="View Figure 1 in the life insurance paper"><img src="efficient-frontier.webp" alt="Three-dimensional efficient frontier showing payout volatility against expected payout and the market price of interest-rate risk."></a>
+          <figcaption>Efficient frontier · Fig. 1(a)</figcaption>
+        </figure>
+        <div class="paper">
+          <h3><a href="https://arxiv.org/abs/2608.04532">Optimal Life Insurance Decision in Mean-Variance DC Management with Mortality Improvements</a></h3>
+          <p class="authors"><strong>Yueman Feng</strong>, Wenyuan Li, Mengyi Xu, Pengyu Wei</p>
+          <p>How should workers adjust their insurance as they live longer? In our model, longer working-life survival shifts insurance demand toward early adulthood, when more future earnings are at stake.</p>
+          <p class="links"><a href="https://arxiv.org/abs/2608.04532">arXiv:2608.04532</a></p>
+        </div>
       </article>
       <article>
-        <h3><a href="https://arxiv.org/abs/2608.04532">Optimal Life Insurance Decision in Mean-Variance DC Management with Mortality Improvements</a></h3>
-        <p>How does rising life expectancy change the balance between saving for retirement and buying life insurance?</p>
+        <figure>
+          <a href="https://arxiv.org/pdf/2611.06495v1#page=24" aria-label="View Figure 1 in the constrained pension paper"><img src="training-loss.webp" alt="Four optimization methods’ loss curves over 2,000 training iterations at risk aversion gamma equal to 1.5."></a>
+          <figcaption>Training loss · Fig. 1(a), γ = 1.5</figcaption>
+        </figure>
+        <div class="paper">
+          <h3><a href="https://arxiv.org/abs/2611.06495">Constrained Defined-Contribution Pension Management: A Reparameterized Neural Network Approach</a></h3>
+          <p class="authors"><strong>Yueman Feng</strong>, Wenyuan Li</p>
+          <p>We develop a neural network method to bound the value of a pension strategy under trading limits. On a model calibrated to U.S. data, it narrows the gap between the upper and lower bounds.</p>
+          <p class="links"><a href="https://arxiv.org/abs/2611.06495">arXiv:2611.06495</a></p>
+        </div>
       </article>
     </section>
   </main>
